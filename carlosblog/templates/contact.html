@@ -1,0 +1,41 @@
+{% extends 'padre.html' %}
+
+{% load static %}
+
+{% block content %}
+
+
+        <!-- Main Content-->
+<div class="container px-4 px-lg-5">
+    <div class="row gx-4 gx-lg-5 justify-content-center">
+        <div class="col-md-10 col-lg-8 col-xl-7">
+            <h1>Agrega tus datos y me pondré en contacto contigo</h1>
+
+        <form action="alta_contacto" method="POST">
+            {% csrf_token %}
+            <p>Nombre:</p>
+            <input type="text" name="nombre">
+            <p>Email: </p>
+            <input type="text" name="email">
+            <p>Telefono:</p>
+            <input type="number" name="telefono">
+        
+        <br>
+        <br>
+        
+            <input type="submit" value="Enviar">
+        </form>
+        <br>
+        <br>
+        </div>
+    </div>
+</div>
+
+<br>
+<br>
+
+{% endblock %}
+
+
+
+

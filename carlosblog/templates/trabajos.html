@@ -1,0 +1,33 @@
+{% extends 'padre.html' %}
+
+{% load static %}
+
+{% block content %}
+
+
+
+<div class="container px-4 px-lg-5">
+    <div class="row gx-4 gx-lg-5 justify-content-center">
+        <div class="col-md-10 col-lg-8 col-xl-7">
+            <h1>Carlos te ofrece numerosos puestos de trabajo para vos!</h1>
+            <p>Carlos Jolly realiza efectos visuales para diferentes series de televisión y publicidades, este es un recorrido por su trabajo a lo largo de su temprana carrera en la composición de efectos visuales. Aplica para tu trabajo y consigue una entrevista exclusiva con él.</p>
+
+<form action="alta_trabajo" method="POST">
+    {% csrf_token %}
+    <p>Nombre:</p>
+    <input type="text" name="nombre">
+    <p>Trabajo: </p>
+    <input type="text" name="trabajo">
+
+<br>
+<br>
+
+    <input type="submit" value="Enviar">
+</form>
+
+        </div>
+    </div>
+</div>
+<br>
+<br>
+{% endblock %}
