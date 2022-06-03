@@ -1,0 +1,1 @@
+http://127.0.0.1:8000/index.html es la primer pagina en donde se podrá ver la home, en el apartado de "Trabajos" y "Conctacto" se encuentran los formularios
