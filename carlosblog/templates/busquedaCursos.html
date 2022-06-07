@@ -1,0 +1,30 @@
+{% extends 'padre.html' %}
+
+{% load static %}
+
+{% block content %}
+
+<div class="container px-4 px-lg-5">
+    <div class="row gx-4 gx-lg-5 justify-content-center">
+        <div class="col-md-10 col-lg-8 col-xl-7">
+
+
+<form action="buscar" method="GET">
+                <h1>Te ofrecemos los mejores cursos de programación aquí: </h1>
+                <p>Buscar cursos:</p>
+
+                <input type="text" name="nombre">
+
+                <input type="submit" value="Buscar">
+
+</form>
+
+
+<br>
+<br>
+
+        </div>
+    </div>
+</div>
+
+{% endblock %}

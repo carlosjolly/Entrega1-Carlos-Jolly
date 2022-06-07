@@ -2,7 +2,7 @@ from django.http import HttpResponse
 from django.shortcuts import render
 from carlosblog.forms import trabajoForm, contactoForm
 from django import forms
-from .models import Trabajos, Contact
+from .models import Trabajos, Contact, Cursos
 
 def index(request):
     return render(request, 'index.html')
@@ -52,16 +52,22 @@ def alta_contacto(request):
 
 
 
+def busquedaCursos(request):
 
-def busquedaTrabajos(request):
-
-    return render(request,'busquedaTrabajos.html')
+    return render(request,'busquedaCursos.html')
 
 def buscar(request):
 
-    respuesta = f"Estoy buscando el trabajo de :{request.GET['trabajos']}"
+    if request.GET['nombre']:
+                nombre = request.GET['nombre']
+                cursos = Cursos.objects.filter(nombre__icontains = nombre)
+                return render (request, "resultado_busqueda.html", {"curso":cursos})
+    else:
+        return HttpResponse("Campo vacío")
 
-    return HttpResponse(respuesta)
+
+
+
 
 
 

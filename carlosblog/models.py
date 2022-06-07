@@ -14,3 +14,8 @@ class Alumnos(models.Model):
     nombre = models.CharField(max_length=40)
     cursos = models.CharField(max_length=40)
 
+class Cursos(models.Model):
+    nombre = models.CharField(max_length=40)
+    camada = models.IntegerField()
+
+
